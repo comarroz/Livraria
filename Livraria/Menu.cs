@@ -9,10 +9,16 @@ namespace Livraria
     class Menu
     {
         ControlPessoa controlePessoa;
+        ControlLivro controleLivro;
+        ControlReserva controleReserva;
+
         public int opcao;
         public Menu()
         {
             controlePessoa = new ControlPessoa();
+            controleLivro = new ControlLivro();
+            ControlReserva = new ControlReserva();
+
             opcao = 0;
         }//fim do menu
 
@@ -42,12 +48,15 @@ namespace Livraria
                         controlePessoa.Operacao();
                         break;
                     case 2:
+                        controleLivro.Operacao();
 
                         break;
                     case 3:
+                        controleReserva.Operacao();
 
                         break;
                     case 4:
+                        controleCompra.Operacao();
 
                         break;
                     default:
